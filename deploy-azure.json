@@ -8,7 +8,7 @@
         },
         "frostybotPort": {
             "type": "int",
-            "defaultValue": 80
+            "defaultValue": 8654
         },
         "sshPort": {
             "type": "int",
