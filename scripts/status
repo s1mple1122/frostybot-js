@@ -7,7 +7,7 @@ PORTCFG="$ROOTPATH/.port"
 if [ -f "$PORTCFG" ]; then
     PORT=`cat $PORTCFG`
 else
-    PORT=80
+    PORT=8654
 fi
 
 PID=`sudo ps -ax | grep "fb-$PORT" | grep -v "grep" | awk '{print $1}'`

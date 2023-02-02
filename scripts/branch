@@ -8,7 +8,7 @@ PORTCFG="$ROOTPATH/.port"
 if [ -f "$PORTCFG" ]; then
     PORT=`cat $PORTCFG`
 else
-    PORT=80
+    PORT=8654
 fi
 
 PID=`sudo ps -ax | grep "fb-$PORT" | grep -v "grep" | awk '{print $1}'`
@@ -40,7 +40,7 @@ sudo cp ./.port /tmp/$TS/
 sudo cp ./.proxy /tmp/$TS/
 echo "Switching branch..."
 #sudo git stash
-sudo git stash 
+sudo git stash
 sudo git checkout $BRANCH
 sudo git pull -f
 sudo cp -f /tmp/$TS/database.* database/
